@@ -20,7 +20,7 @@ namespace OpenAI.Chat
         {
             ClientUriBuilder uri = new ClientUriBuilder();
             uri.Reset(_endpoint);
-            uri.AppendPath("/chat/completions", false);
+            // uri.AppendPath("/chat/completions", false);
             if (after != null)
             {
                 uri.AppendQuery("after", after, true);
@@ -59,7 +59,7 @@ namespace OpenAI.Chat
         {
             ClientUriBuilder uri = new ClientUriBuilder();
             uri.Reset(_endpoint);
-            uri.AppendPath("/chat/completions", false);
+            // uri.AppendPath("/chat/completions", false);
             PipelineMessage message = Pipeline.CreateMessage(uri.ToUri(), "POST", PipelineMessageClassifier200);
             PipelineRequest request = message.Request;
             request.Headers.Set("Accept", "application/json");
@@ -74,7 +74,7 @@ namespace OpenAI.Chat
         {
             ClientUriBuilder uri = new ClientUriBuilder();
             uri.Reset(_endpoint);
-            uri.AppendPath("/chat/completions/", false);
+            // uri.AppendPath("/chat/completions/", false);
             uri.AppendPath(completionId, true);
             PipelineMessage message = Pipeline.CreateMessage(uri.ToUri(), "GET", PipelineMessageClassifier200);
             PipelineRequest request = message.Request;
@@ -88,7 +88,7 @@ namespace OpenAI.Chat
         {
             ClientUriBuilder uri = new ClientUriBuilder();
             uri.Reset(_endpoint);
-            uri.AppendPath("/chat/completions/", false);
+            // uri.AppendPath("/chat/completions/", false);
             uri.AppendPath(completionId, true);
             PipelineMessage message = Pipeline.CreateMessage(uri.ToUri(), "POST", PipelineMessageClassifier200);
             PipelineRequest request = message.Request;
@@ -104,7 +104,7 @@ namespace OpenAI.Chat
         {
             ClientUriBuilder uri = new ClientUriBuilder();
             uri.Reset(_endpoint);
-            uri.AppendPath("/chat/completions/", false);
+            // uri.AppendPath("/chat/completions/", false);
             uri.AppendPath(completionId, true);
             PipelineMessage message = Pipeline.CreateMessage(uri.ToUri(), "DELETE", PipelineMessageClassifier200);
             PipelineRequest request = message.Request;
@@ -118,7 +118,7 @@ namespace OpenAI.Chat
         {
             ClientUriBuilder uri = new ClientUriBuilder();
             uri.Reset(_endpoint);
-            uri.AppendPath("/chat/completions/", false);
+            // uri.AppendPath("/chat/completions/", false);
             uri.AppendPath(completionId, true);
             uri.AppendPath("/messages", false);
             if (after != null)
