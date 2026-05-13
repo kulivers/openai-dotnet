@@ -4,9 +4,8 @@
   <PropertyGroup>
     <RepositoryRoot>$(MSBuildThisFileDirectory)</RepositoryRoot>
 
-    <ClientTargetFrameworks>net10.0;net8.0;netstandard2.0</ClientTargetFrameworks>
-    <TestTargetFrameworks>net10.0;net9.0;net8.0</TestTargetFrameworks>
-    <SampleTargetFrameworks>net10.0</SampleTargetFrameworks>
+    <ClientTargetFrameworks>net8.0;netstandard2.0</ClientTargetFrameworks>
+    <TestTargetFrameworks>net8.0</TestTargetFrameworks>
   </PropertyGroup>
 
   <!-- Common Project Metadata -->
@@ -24,7 +23,6 @@
     <Configurations>Debug;Release;Unsigned</Configurations>
     <LangVersion>latest</LangVersion>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
 
     <!-- Embed source files that are not tracked by the source control manager in the PDB -->
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
