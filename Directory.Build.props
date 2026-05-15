@@ -67,18 +67,6 @@
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
 
-  <!-- Signing -->
-  <PropertyGroup Condition="'$(Configuration)' != 'Unsigned'">
-    <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>$(RepositoryRoot)eng/OpenAI.snk</AssemblyOriginatorKeyFile>
-  </PropertyGroup>
-
-  <!-- Build and Release Configuration -->
-  <PropertyGroup Condition="'$(GITHUB_ACTIONS)' == 'true'">
-    <!-- Normalize stored file paths in symbols when in a CI build. -->
-    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
-  </PropertyGroup>
-
   <!--
     ==============================================================
       OVERRIDES: Test and Sample Projects
