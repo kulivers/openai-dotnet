@@ -3,7 +3,7 @@
     <Description>The official .NET library for the OpenAI service API.</Description>
     <AssemblyTitle>OpenAI client library for .NET</AssemblyTitle>
 
-    <TargetFrameworks>$(ClientTargetFrameworks)</TargetFrameworks>
+    <TargetFramework>net8.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
